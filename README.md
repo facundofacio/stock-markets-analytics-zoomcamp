@@ -1,0 +1,1 @@
+# Homework for the Stock Market Analytics Zoomcamp

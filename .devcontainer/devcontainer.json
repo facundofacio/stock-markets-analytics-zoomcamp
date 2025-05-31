@@ -1,0 +1,29 @@
+{
+    "name": "stock-markets-analytics-zoomcamp",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {},
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": ".venv/bin/python"
+            },
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "bodil.prettier-toml",
+                "redhat.vscode-yaml",
+                "ms-toolsai.jupyter",
+                "mechatroner.rainbow-csv"
+            ]
+        }
+    },
+    "containerEnv": {
+        "UV_LINK_MODE": "copy"
+    },
+    "postCreateCommand": "uv pip install -e . && uv sync",
+    "mounts": [
+        "source=${env:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+    ]
+}
