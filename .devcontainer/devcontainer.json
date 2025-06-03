@@ -27,5 +27,5 @@
         "source=${env:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
     ],
     "postCreateCommand": "uv pip install -e . && uv sync",
-    "postStartCommand": "echo alias ll=\\'ls -alF\\' >> ~/.bash_aliases"
+    "postStartCommand": "echo alias ll=\\'ls -alhF\\' >> ~/.bash_aliases"
 }
